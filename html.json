@@ -1,0 +1,107 @@
+{
+	// Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+
+	"Criar um novo bloco de conteudo": {
+		"prefix": "newblock",
+		"body": [
+			"{% block content %} $1 {% endblock %}",
+		],
+		"description": "definir novo bloco de conteudo"
+	},
+	"Carregar arquivos estaticos": {
+		"prefix": "loadstatic",
+		"body": [
+			"{% load static %}",
+		],
+		"description": "Carregar arquivos estaticos"
+	},
+	"Carregar arquivos base html": {
+		"prefix": "extendshtml",
+		"body": [
+			"{% extends '$1' %}",
+		],
+		"description": "Carregar arquivos base html"
+	},
+	"Iniciar um novo bloco de conteudo": {
+		"prefix": "startblock",
+		"body": [
+			"{% block content %}",
+		],
+		"description": "Iniciar um novo bloco de conteudo"
+	},
+	"Finalizar um novo bloco de conteudo": {
+		"prefix": "endblock",
+		"body": [
+			"{% endblock %}",
+		],
+		"description": "Finalizar um novo bloco de conteudo"
+	},
+	"Abrir tag Django": {
+		"prefix": "tagstart",
+		"body": [
+			"{% static '",
+		],
+		"description": "Abrir tag Django"
+	},
+	"Fechar tag Django": {
+		"prefix": "tagend",
+		"body": [
+			"' %}",
+		],
+		"description": "Fechar tag Django"
+	},
+	"Include partials": {
+		"prefix": "inpartial",
+		"body": [
+			"{% include '$1/$2' %}",
+		],
+		"description": "Incluir partials"
+	},
+	"Start for": {
+		"prefix": "startfor",
+		"body": [
+			"{% for $1 in $2 %}",
+		],
+		"description": "Inciar o for"
+	},
+	"End for": {
+		"prefix": "endfor",
+		"body": [
+			"{% endfor %}",
+		],
+		"description": "Fechar o for"
+	},
+	"Start if": {
+		"prefix": "startif",
+		"body": [
+			"{% if $1 %}",
+		],
+		"description": "Inciar o if"
+	},
+	"End if": {
+		"prefix": "endif",
+		"body": [
+			"{% endif %}",
+		],
+		"description": "Fechar o if"
+	},
+
+
+
+	
+
+	
+}

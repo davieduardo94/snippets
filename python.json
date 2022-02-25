@@ -1,0 +1,169 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"criar arquivo urls.py": {
+		"prefix": "urls_py",
+		"body": [
+			"from django.urls import path\n",
+			"from . import views\n",
+			"urlpatterns = [",
+			"\tpath('$1', views.$2, name='$3')",
+			"]",
+		],
+		"description": "Cria a strutura de urls.py"
+	},
+	"include path url": {
+		"prefix": "pathinclude",
+		"body": [
+			"path('$1', include('$2.urls'), name='$3'),",
+		],
+		"description": "definir um path include"
+	},
+	"Criar uma nova rota": {
+		"prefix": "pathroute",
+		"body": [
+			"path('$1', views.$2, name='$3'),",
+		],
+		"description": "definir um path url para uma nova rota"
+	},
+	"Criar um novo bloco de conteudo": {
+		"prefix": "blockcontent",
+		"body": [
+			"{\\% block content \\%} $1 {\\% endblock \\%}",
+		],
+		"description": "definir novo bloco de conteudo"
+	},
+	"Carregar arquivos estaticos": {
+		"prefix": "loadstatic",
+		"body": [
+			"{% load static %}",
+		],
+		"description": "Carregar arquivos estaticos"
+	},
+	"Carregar arquivos base html": {
+		"prefix": "extendshtml",
+		"body": [
+			"{% extends '$1' %}",
+		],
+		"description": "Carregar arquivos base html"
+	},
+	"Iniciar um novo bloco de conteudo": {
+		"prefix": "startblock",
+		"body": [
+			"{% block content %}",
+		],
+		"description": "Iniciar um novo bloco de conteudo"
+	},
+	"Finalizar um novo bloco de conteudo": {
+		"prefix": "endblock",
+		"body": [
+			"{% endblock %}",
+		],
+		"description": "Finalizar um novo bloco de conteudo"
+	},
+	"Abrir tag Django": {
+		"prefix": "tagstart",
+		"body": [
+			"{% static '",
+		],
+		"description": "Abrir tag Django"
+	},
+	"Fechar tag Django": {
+		"prefix": "tagend",
+		"body": [
+			"' %}",
+		],
+		"description": "Fechar tag Django"
+	},
+	"Include partials": {
+		"prefix": "inpartial",
+		"body": [
+			"{% include '$1/$2' %}",
+		],
+		"description": "Incluir partials"
+	},
+	"Start for": {
+		"prefix": "startfor",
+		"body": [
+			"{% for $1 in $2 %}",
+		],
+		"description": "Inciar o for"
+	},
+	"End for": {
+		"prefix": "endfor",
+		"body": [
+			"{% endfor %}",
+		],
+		"description": "Fechar o for"
+	},
+	"classmodel": {
+		"prefix": "classmodel",
+		"body": [
+			"class $1(models.Model):",
+			"\t$2\n",
+			"\tpass"
+		],
+		"description": "Cria uma classe model"
+	},
+	"charField": {
+		"prefix": "modcharfield",
+		"body": [
+			"$1 = models.CharField(max_length=$2, blank=$3, null=$4)",
+		],
+		"description": "Cria um charfield no model"
+	},
+	"textField": {
+		"prefix": "modtextfield",
+		"body": [
+			"$1 = models.TextField(max_length=$2, blank=$3, null=$4)",
+		],
+		"description": "Cria um textField no model"
+	},
+	"integerField": {
+		"prefix": "modintegerfield",
+		"body": [
+			"$1 = models.IntegerField(),",
+		],
+		"description": "Cria um integerField no model"
+	},
+	"datetimeField": {
+		"prefix": "moddatetimefield",
+		"body": [
+			"$1 = models.DateTimeField(default=$2, blank=$3)",
+		],
+		"description": "Cria um datetimeField no model"
+	},
+	"adminRegisterClass": {
+		"prefix": "adminregister",
+		"body": [
+			"from .models import $1\n",
+			"admin.site.register($2)",
+		],
+		"description": "Cria um datetimeField no model"
+	},
+	"Start if": {
+		"prefix": "startif",
+		"body": [
+			"{% if $1 %}",
+		],
+		"description": "Inciar o if"
+	},
+	"End if": {
+		"prefix": "endif",
+		"body": [
+			"{% endif %}",
+		],
+		"description": "Fechar o if"
+	},
+}
